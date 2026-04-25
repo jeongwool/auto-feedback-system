@@ -1,0 +1,8 @@
+echo "deepagents>=0.5.1
+deepagents-cli>=0.0.3
+langchain-openai>=1.1.12
+langchain-openrouter>=0.2.1" > requirements.txt
+
+git add requirements.txt
+git commit -m "chore: requirements.txt 추가"
+git push origin main
