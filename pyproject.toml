@@ -1,10 +1,11 @@
 [project]
 name = "my-agent-project"
 version = "0.1.0"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
     "deepagents>=0.5.1",
     "deepagents-cli>=0.0.3",
     "langchain-openai>=1.1.12",
-    "langchain-openrouter>=0.2.1",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.29.0",
 ]
