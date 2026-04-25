@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: uv 설치
+        run: pip install uv
+
+      - name: 의존성 설치
+        run: uv sync --frozen
+
+      - name: Docker 이미지 빌드 확인
+        run: docker build -t auto-feedback-ci .
+
+      - name: API 임포트 확인
+        run: uv run python -c "from src.api import app; print('API import OK')"
