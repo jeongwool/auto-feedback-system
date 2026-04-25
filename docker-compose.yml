@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  agent:
+    build: .
+    container_name: auto-feedback-agent
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+
+  api:
+    build: .
+    container_name: auto-feedback-api
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+    command: uv run uvicorn src.api:app --host 0.0.0.0 --port 8000
