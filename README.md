@@ -1,16 +1,28 @@
-# 🎓 교육용 과제 자동 피드백 시스템
+## 5. Docker 실행 방법
 
-## 1. 에이전트 목표
-학생 과제를 구조, 개념, 언어 관점에서 다단계로 분석하여 정교한 피드백 리포트를 생성함.
+```bash
+# 이미지 빌드
+docker build -t auto-feedback .
 
-## 2. 동작 원리
-- **Supervisor-SubAgent 구조**: 메인 에이전트가 3명의 전문 에이전트에게 업무를 위임.
-- **DeepAgents 활용**: 각 에이전트 간의 논리적 추론 루프를 통해 결과 도출.
+# 실행 (.env 파일에 OPENAI_API_KEY 필요)
+docker run --env-file .env auto-feedback
+```
 
-## 3. 실행 결과 (B+)
-- **Total Score**: 79/100
-- **Grade**: B+
-- **주요 피드백**: 논리적 흐름은 좋으나 개념의 깊이가 다소 피상적임. 문법 오류 수정 필요.
+## 6. 의존성 및 라이선스
 
-## 4. 실행 방법
-`uv run python main.py` 명령어로 실행. (.env 파일에 OpenAI 키 설정 필요)
+| 라이브러리 | 버전 | 라이선스 |
+|-----------|------|---------|
+| deepagents | >=0.5.1 | MIT |
+| deepagents-cli | >=0.0.3 | MIT |
+| langchain-openai | >=1.1.12 | MIT |
+
+본 프로젝트를 오픈소스로 공개할 경우 **MIT 라이선스** 채택 예정.
+이유: 사용한 라이브러리가 모두 MIT이며 상업적 제한 없이 자유롭게 활용 가능하기 때문.
+
+## 7. 보안 점검
+
+```bash
+pip install pip-audit
+pip-audit
+```
+의존성 취약점 없음 확인 (2026-04-25 기준)
