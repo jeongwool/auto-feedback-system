@@ -3,8 +3,6 @@
 AI 에이전트를 활용한 논문 섹션별 자동 첨삭 시스템.  
 학생 논문을 섹션별로 분석하여 반복적인 Ralph Loop를 통해 품질을 개선합니다.
 
-[![GitHub Actions](https://github.com/jeongwool/auto-feedback-system/actions/workflows/ci.yml/badge.svg)](https://github.com/jeongwool/auto-feedback-system/actions)
-
 ---
 
 ## 1. 문제 정의
