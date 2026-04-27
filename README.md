@@ -78,6 +78,9 @@ uv run python main.py
 uv run uvicorn src.api:app --reload
 # http://localhost:8000/docs 에서 Swagger UI 확인
 
+## GitHub 레포 통계 확인 (Pandas 활용)
+uv run python src/stats.py
+
 ---
 
 ## 6. Docker 실행 방법
