@@ -77,10 +77,6 @@ uv run python main.py
 ```bash
 uv run uvicorn src.api:app --reload
 # http://localhost:8000/docs 에서 Swagger UI 확인
-```
-
-### 환경 변수 설정
-`.env` 파일 생성: API_KEY...
 
 ---
 
@@ -96,7 +92,7 @@ docker-compose up --build
 # http://localhost:8000/docs 에서 API 확인
 ```
 
-팀원의 컴퓨터에서도 Docker로 동일하게 실행 가능합니다 (환경 독립적).
+다른 컴퓨터에서도 Docker로 동일하게 실행 가능합니다 (환경 독립적).
 
 ---
 
