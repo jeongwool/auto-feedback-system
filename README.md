@@ -150,3 +150,7 @@ python -m pip_audit
 | pip | 26.0.1 | CVE-2026-3219 | - |
 
 취약점 대응: langchain-openai 및 langsmith는 pyproject.toml 버전 업데이트로 해결 가능. 프로덕션 배포 전 패키지 업데이트 필요.
+
+## 10. 오픈소스 기여
+
+- [first-contributions #116052](https://github.com/firstcontributions/first-contributions/pull/116052) — Contributors.md에 이름 추가 (merged)
