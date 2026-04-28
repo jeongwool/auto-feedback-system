@@ -1,7 +1,8 @@
-echo "fastapi
-uvicorn
-pydantic
 deepagents>=0.5.1
 deepagents-cli>=0.0.3
 langchain-openai>=1.1.12
-langchain-openrouter>=0.2.1" > requirements.txt
+langchain-openrouter>=0.2.1
+fastapi>=0.110.0
+uvicorn>=0.29.0
+pandas
+requests
