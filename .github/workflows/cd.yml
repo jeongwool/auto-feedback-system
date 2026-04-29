@@ -2,13 +2,12 @@ name: CD (Continuous Deployment)
 
 on:
   workflow_run:
-    workflows: ["CI"] # CI 워크플로우가 끝났을 때 실행
+    workflows: ["CI"]
     types: [completed]
     branches: [main]
 
 jobs:
   deploy:
-    # CI가 성공(success)했을 때만 실행되도록 설정
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     permissions:
@@ -31,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          [cite_start]tags: ghcr.io/${{ github.repository }}/auto-feedback:latest [cite: 18, 84]
+          tags: ghcr.io/${{ github.repository }}/auto-feedback:latest
